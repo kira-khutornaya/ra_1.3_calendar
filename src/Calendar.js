@@ -92,7 +92,11 @@ function Calendar({ date }) {
 }
 
 Calendar.propTypes = {
-  date: PropTypes.instanceOf(Date).isRequired,
+  date: PropTypes.instanceOf(Date),
+};
+
+Calendar.defaultProps = {
+  date: new Date(Date.now()),
 };
 
 export default Calendar;
